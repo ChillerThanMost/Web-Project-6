@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<meta charset= "UTF-8">
+
+<title>
+Javascript
+</title>
+
+</head>
+
+<body>
+
+<header>
+<ul class="nav">
+
+<li class="nav"><a href="index.html">Home</a></li>
+
+<li class="nav"><a href="Gallery.html">Gallery</a></li>
+
+<li class="nav"><a href="Courses.html">Courses</a></li>
+
+<li class="nav"><a class="active" href="javascript.html">Javascript</a></li>
+
+<li class="nav"><a href="game.html"> Web Project 6</a></li>
+
+</ul>
+
+</header>
+<p id="welcome"></p>
+<p id="greeting"></p>
+
+<script>
+document.getElementById('welcome').innerHTML = 'Hello World';
+</script>
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+{
+var name = prompt ('Your name','');
+document.getElementById('gretting').innerHTML = 'Welcome,' + name;
+}
+
+</SCRIPT>
+
+  What was the price of your meal? <input type="number" name="Meal Price" id="a"><br>
+  What is the tip? (in decimal form, please.)<input type="number" name="Tip" id="b"><br>
+  
+  <button onclick="total(document.getElementById('a').value,document.getElementById('b').value)">Find Total</button>
+<p>The meal total is:</p> <br>
+  <p id="mealPrice"></p> <br>
+  <p id="response"></p>
+<script>
+  function total(a,b) {
+  var tax = parseInt(a) * .06; 
+  var tip = parseInt(a) * (b); 
+  var sum = parseInt(a) + tax + tip;
+  
+  document.getElementById('mealPrice').innerHTML = '$' + sum;
+  
+  if (a < 20) {
+   document.getElementById('response').innerHTML = 'Hope you enjoyed your meal!';
+   
+} else if (a > 30) {
+    document.getElementById('response').innerHTML = 'You must really like that place!';
+	
+} else {
+    document.getElementById('response').innerHTML = 'Hope you left a tip!';
+}
+  }
+</script>
+
+</body>
+</html>

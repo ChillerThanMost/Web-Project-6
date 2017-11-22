@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset= "UTF-8">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<title>
+Web Project 6
+</title>
+
+</head>
+
+
+<body>
+
+<header>
+<ul class="nav">
+
+<li class="nav"><a href="index.html">Home</a></li>
+
+<li class="nav"><a href="Gallery.html">Gallery</a></li>
+
+<li class="nav"><a href="Courses.html">Courses</a></li>
+
+<li class="nav"><a href="javascript.html">Javascript</a></li>
+
+<li class="nav"><a class="active" href="game.html"> Web Project 6</a></li>
+
+</ul>
+
+</header>
+
+<h1>Sources</h1>
+    <p>
+        Image:<a href="https://metmuseum.org/toah/works-of-art/JP2822/">The Met</a>
+    <br>
+    Video: <a href="https://www.youtube.com/watch?v=3M_5oYU-IsU">"Man's Not Hot" by Big Shaq</a>
+    </p>
+    
+<h1>Fields Report</h1>
+    <embed src="images/fields%20report.pdf" width="800px" height="1000px" />
+    
+<video width="1280" height="720" controls>
+  <source src="images/movie.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<h1>Scaleable Vector Graphic (SVG)</h1>
+    
+<svg text-align="center" height="720" width="1080">
+
+    <text text-align="center" font-size=100px x="0" y="100" fill="white">S C A L E A B L E</text>
+    
+</svg>
+
+<h1>
+
+The Canvas Element
+
+</h1>
+
+     <img position="center" width="relative" height="relative" src="images/whenUNut.jpg" />
+    <img id="jp" src="images/jp.png" style="display: none;" />
+    <p><button onclick="myCanvas()">Remaster It</button></p>
+                                   
+<canvas id="myCanvas" height="1019" width="1500">
+    
+  
+
+<script>
+function myCanvas() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    var img = document.getElementById("jp");
+    ctx.drawImage(img,10,10);
+}
+</script>
+
+
+
+
+</body>
+
+</html>
